@@ -1,7 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/softawaregmbh/library-holidays</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/softawaregmbh/library-holidays</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>holiday, holidays</PackageTags>
+    <Company>softaware gmbh</Company>
+    <Authors>Bernhard Mayr</Authors>
+    <PackageLicenseUrl>https://github.com/softawaregmbh/library-holidays/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
