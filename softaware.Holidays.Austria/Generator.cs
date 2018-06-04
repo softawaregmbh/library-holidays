@@ -8,7 +8,7 @@ namespace softaware.Holidays.Austria
     {
         public static IEnumerable<Holiday> ForAustria(this Holidays.Generator generator, int year)
         {
-            var holiday = generator.Bind(year);
+            var holiday = generator.Create(year);
 
             yield return holiday.WithDate("Neujahr", month: 1, day: 1);
             yield return holiday.WithDate("Heilige Drei Könige", month: 1, day: 6);

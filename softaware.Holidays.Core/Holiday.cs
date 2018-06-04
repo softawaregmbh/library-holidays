@@ -12,5 +12,8 @@ namespace softaware.Holidays.Model
 
         public override int GetHashCode() =>
             $"{Name}{Date.ToFileTimeUtc()}".GetHashCode();
+
+        public override string ToString() =>
+            $"{Name} ({Date})";
     }
 }

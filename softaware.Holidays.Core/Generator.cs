@@ -10,7 +10,7 @@ namespace softaware.Holidays
     {
         private readonly DateTime easterSunday;
 
-        public GeneratorFunctions(DateTime easterSunday) => this.easterSunday = easterSunday;
+        public GeneratorFunctions(DateTime easterSunday) : base() => this.easterSunday = easterSunday;
 
         public Holiday WithDate(string name, int month, int day) => new Holiday { Name = name, Date = new DateTime(easterSunday.Year, month, day) };
         public Holiday BeforeEaster(string name, int days) => new Holiday { Name = name, Date = easterSunday.Subtract(new TimeSpan(days, 0, 0, 0)) };
@@ -35,7 +35,7 @@ namespace softaware.Holidays
             return new DateTime(year, 3 + os / 31, os % 31);
         }
 
-        public GeneratorFunctions Bind(int year)
+        public GeneratorFunctions Create(int year)
             => new GeneratorFunctions(EasterSunday(year));
     }
 }
