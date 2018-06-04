@@ -9,6 +9,12 @@
     <Company>softaware gmbh</Company>
     <Authors>Bernhard Mayr</Authors>
     <PackageLicenseUrl>https://github.com/softawaregmbh/library-holidays/blob/master/LICENSE</PackageLicenseUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.0\softaware.Holidays.Core.xml</DocumentationFile>
+    <WarningsAsErrors>NU1605;CS1591</WarningsAsErrors>
   </PropertyGroup>
 
 </Project>
