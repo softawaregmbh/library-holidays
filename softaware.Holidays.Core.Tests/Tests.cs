@@ -9,7 +9,7 @@ namespace softaware.Holidays.Core.Tests
         public void EasterSunday2018()
         {
             Assert.Equal(
-                new Generator().EasterSundayGregorian(2018),
+                new Generator().EasterSunday(2018),
                 new DateTime(2018, 4, 1));
         }
         
@@ -17,7 +17,7 @@ namespace softaware.Holidays.Core.Tests
         public void EasterSunday2019()
         {
             Assert.Equal(
-                new Generator().EasterSundayGregorian(2019),
+                new Generator().EasterSunday(2019),
                 new DateTime(2019, 4, 21));
         }
     }
