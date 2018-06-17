@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using softaware.Holidays.Extensions;
 
 namespace softaware.Holidays.Core.Tests
 {
@@ -10,7 +11,7 @@ namespace softaware.Holidays.Core.Tests
         {
             Assert.Equal(
                 new Generator().EasterSunday(2018),
-                new DateTime(2018, 4, 1));
+                1.January(2018));
         }
         
         [Fact]
