@@ -1,11 +1,19 @@
-﻿using softaware.Holidays.Model;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using softaware.Holidays.Model;
 
 namespace softaware.Holidays.Austria
 {
+    /// <summary>
+    /// Holiday generator class
+    /// </summary>
     public static class Generator
     {
+        /// <summary>
+        /// Get austrian holidays
+        /// </summary>
+        /// <param name="generator"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public static IEnumerable<Holiday> ForAustria(this Holidays.Generator generator, int year)
         {
             var holiday = generator.Create(year);
