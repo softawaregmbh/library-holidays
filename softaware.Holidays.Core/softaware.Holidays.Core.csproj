@@ -12,6 +12,8 @@
     <PackageLicenseUrl>https://github.com/softawaregmbh/library-holidays/blob/master/LICENSE</PackageLicenseUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIconUrl>https://secure.gravatar.com/avatar/d441f5a5514d2afce7da518a89f028d0?s=512&amp;r=g&amp;d=retro</PackageIconUrl>
+    <Description>A simple .netstandard library for automatically generating holidays.
+This is the core library.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
