@@ -6,11 +6,12 @@
     <PackageProjectUrl>https://github.com/softawaregmbh/library-holidays</PackageProjectUrl>
     <RepositoryUrl>https://github.com/softawaregmbh/library-holidays</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>holiday, holidays</PackageTags>
+    <PackageTags>softaware, Holiday</PackageTags>
     <Company>softaware gmbh</Company>
-    <Authors>Bernhard Mayr</Authors>
+    <Authors>softaware gmbh</Authors>
     <PackageLicenseUrl>https://github.com/softawaregmbh/library-holidays/blob/master/LICENSE</PackageLicenseUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIconUrl>https://secure.gravatar.com/avatar/d441f5a5514d2afce7da518a89f028d0?s=512&amp;r=g&amp;d=retro</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

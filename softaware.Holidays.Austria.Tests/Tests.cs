@@ -1,8 +1,6 @@
 using System;
-using Xunit;
-using softaware.Holidays;
-using System.Linq;
 using System.Collections.Generic;
+using Xunit;
 
 namespace softaware.Holidays.Austria.Tests
 {
