@@ -21,6 +21,7 @@ namespace softaware.Holidays.Austria
             yield return holiday.WithDate("Neujahr", month: 1, day: 1);
             yield return holiday.WithDate("Heilige Drei Könige", month: 1, day: 6);
             yield return holiday.BeforeEaster("Karfreitag", days: 2);
+            yield return holiday.AfterEaster("Ostersonntag", days: 0);
             yield return holiday.AfterEaster("Ostermontag", days: 1);
             yield return holiday.WithDate("Staatsfeiertag", month: 5, day: 1);
             yield return holiday.AfterEaster("Christi Himmelfahrt", days: 39);

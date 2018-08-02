@@ -15,6 +15,7 @@ namespace softaware.Holidays.Austria.Tests
                 new Model.Holiday { Name = "Neujahr", Date = new DateTime(2018, 1, 1) },
                 new Model.Holiday { Name = "Heilige Drei Könige", Date = new DateTime(2018, 1, 6) },
                 new Model.Holiday { Name = "Karfreitag", Date = new DateTime(2018, 3, 30) },
+                new Model.Holiday { Name = "Ostersonntag", Date = new DateTime(2018, 4, 1) },
                 new Model.Holiday { Name = "Ostermontag", Date = new DateTime(2018, 4, 2) },
                 new Model.Holiday { Name = "Staatsfeiertag", Date = new DateTime(2018, 5, 1) },
                 new Model.Holiday { Name = "Christi Himmelfahrt", Date = new DateTime(2018, 5, 10) },
