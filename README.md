@@ -5,25 +5,37 @@
 
 <div align="center">
   <h3>
-	[Usage](#usage)
+    <a href="#usage">
+      Usage
+    </a>
     <span> | </span>
-	[Motivation](#motivation)
+    <a href="#motivation">
+      Motivation
+    </a>
     <span> | </span>
-	[Contributing](CONTRIBUTING.md)
+    <a href="CONTRIBUTING.md">
+      Contributing
+    </a>
     <span> | </span>
-    [GitHub](https://github.com/softawaregmbh/library-holidays)
+    <a href="https://github.com/softawaregmbh/library-holidays">
+      GitHub
+    </a>
     <span> | </span>
-    [NuGet](https://www.nuget.org/packages?q=softaware.holidays")
+    <a href="https://www.nuget.org/packages?q=softaware.holidays">
+      NuGet
+    </a>
     <span> | </span>
-    [Blog Article](TODO: insert link to blog article here")
+    <a href="TODO: insert link to blog article here">
+      Blog Article
+    </a>
   </h3>
 </div>
 
 
 ## Usage
-Install `softaware.Holidays.<Country>` from [nuget](https://www.nuget.org/packages?q=softaware.holidays) and then simply generate your holidays for a specific year using the following line of code:
+Install `softaware.Holidays.<Country>` from [NuGet](https://www.nuget.org/packages?q=softaware.holidays) and then simply generate your holidays for a specific year using the following line of code:
 ```csharp
-var holidays = new Holidays.Generator().ForAustria(2018); // Replace Austria with the country you want to generate the holidays for
+var holidays = new Holidays.Generator().ForAustria(2018); // // Replace Austria with the country you want to generate the holidays for
 ```
 
 ## Motivation
