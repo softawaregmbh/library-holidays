@@ -4,16 +4,16 @@ using softaware.Holidays.Model;
 namespace softaware.Holidays.Austria
 {
     /// <summary>
-    /// Holiday generator class
+    /// Static class to extend the <see cref="softaware.Holidays.Generator"/> with a method specific for Austrian holidays.
     /// </summary>
     public static class Generator
     {
         /// <summary>
-        /// Get austrian holidays
+        /// Generates Austrian holidays for a given year.
         /// </summary>
-        /// <param name="generator"></param>
-        /// <param name="year"></param>
-        /// <returns></returns>
+        /// <param name="generator">The generated that gets extended.</param>
+        /// <param name="year">The year for which the holidays should be generated.</param>
+        /// <returns>An <code>IEnumerable</code> of the generated holidays.</returns>
         public static IEnumerable<Holiday> ForAustria(this Holidays.Generator generator, int year)
         {
             var holiday = generator.Create(year);

@@ -21,6 +21,10 @@ This is the library for Austrian holidays.</Description>
     <WarningsAsErrors>NU1605;CS1591</WarningsAsErrors>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.0\softaware.Holidays.Austria.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\softaware.Holidays.Core\softaware.Holidays.Core.csproj" />
   </ItemGroup>
