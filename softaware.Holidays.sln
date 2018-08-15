@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "softaware.Holidays.Core", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "softaware.Holidays.Core.Tests", "softaware.Holidays.Core.Tests\softaware.Holidays.Core.Tests.csproj", "{DEF7A6D9-CAC2-4A76-A75A-99756FC7F047}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "softaware.Holidays.Austria", "softaware.Holidays.Austria\softaware.Holidays.Austria.csproj", "{B158E43D-42D9-4D31-A62F-905E42AA84FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "softaware.Holidays.Austria", "softaware.Holidays.Austria\softaware.Holidays.Austria.csproj", "{B158E43D-42D9-4D31-A62F-905E42AA84FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "softaware.Holidays.Austria.Tests", "softaware.Holidays.Austria.Tests\softaware.Holidays.Austria.Tests.csproj", "{C37B7DEA-AD8D-4CB5-9DEC-7720E283F123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "softaware.Holidays.Austria.Tests", "softaware.Holidays.Austria.Tests\softaware.Holidays.Austria.Tests.csproj", "{C37B7DEA-AD8D-4CB5-9DEC-7720E283F123}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C3EABC3-8D52-4737-8CAE-EF5A9A64FFF1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

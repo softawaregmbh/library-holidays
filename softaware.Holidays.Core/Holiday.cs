@@ -3,37 +3,37 @@
 namespace softaware.Holidays.Model
 {
     /// <summary>
-    /// Holiday class
+    /// Represents a Holiday
     /// </summary>
     public class Holiday
     {
         /// <summary>
-        /// Name
+        /// Name of the holiday.
         /// </summary>
         public string Name { get; set; }
-
+        
         /// <summary>
-        /// Date
+        /// Date of the holiday.
         /// </summary>
         public DateTime Date { get; set; }
-
+        
         /// <summary>
-        /// Equals
+        /// Checks whether two holidays are the same.
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
         public override bool Equals(object obj) =>
             obj is Holiday holiday && this.Name == holiday.Name && this.Date == holiday.Date;
-
+        
         /// <summary>
-        /// Hashcode
+        /// Returns the hash code for this holiday.
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode() =>
             $"{Name}{Date.ToFileTimeUtc()}".GetHashCode();
-
+        
         /// <summary>
-        /// String representation
+        /// Returns the string representation of the holiday.
         /// </summary>
         /// <returns></returns>
         public override string ToString() =>

@@ -7,49 +7,46 @@ using System.Runtime.CompilerServices;
 namespace softaware.Holidays
 {
     /// <summary>
-    /// Generator functions
+    /// Represents an object that knows about a specific easter sunday and enables holiday generation based on this date.
     /// </summary>
     public class GeneratorFunctions
     {
         private readonly DateTime easterSunday;
-
+        
+        internal GeneratorFunctions(DateTime easterSunday) : base() => this.easterSunday = easterSunday;
+        
         /// <summary>
-        /// Default constructor
+        /// Creates a holiday on a specific date in the same year as the easter sunday.
         /// </summary>
-        /// <param name="easterSunday"></param>
-        public GeneratorFunctions(DateTime easterSunday) : base() => this.easterSunday = easterSunday;
-
-        /// <summary>
-        /// With date
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="month"></param>
-        /// <param name="day"></param>
-        /// <returns></returns>
+        /// <param name="name">The name of the holiday.</param>
+        /// <param name="month">The month of the holiday's date.</param>
+        /// <param name="day">The day of the holiday's date.</param>
+        /// <returns>The holiday.</returns>
         public Holiday WithDate(string name, int month, int day) => new Holiday { Name = name, Date = new DateTime(easterSunday.Year, month, day) };
-
+        
         /// <summary>
-        /// Before easter
+        /// Creates a holiday with n days before the easter sunday.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="days"></param>
-        /// <returns></returns>
+        /// <param name="name">The name of the holiday.</param>
+        /// <param name="days">The amount of days before easter sunday.</param>
+        /// <returns>The holiday.</returns>
         public Holiday BeforeEaster(string name, int days) => new Holiday { Name = name, Date = easterSunday.Subtract(new TimeSpan(days, 0, 0, 0)) };
 
         /// <summary>
-        /// After easter
+        /// Creates a holiday with n days after the easter sunday.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="days"></param>
-        /// <returns></returns>
+        /// <param name="name">The name of the holiday.</param>
+        /// <param name="days">The amount of days after easter sunday.</param>
+        /// <returns>The holiday.</returns>
         public Holiday AfterEaster(string name, int days) => new Holiday { Name = name, Date = easterSunday.Add(new TimeSpan(days, 0, 0, 0)) };
     }
-
+    
     /// <summary>
-    /// Generator
+    /// Represents a generator that is capable of generating holidays.
     /// </summary>
     public class Generator
     {
+        // the following algorithm is magic, invented by Gauß: https://de.wikipedia.org/wiki/Gau%C3%9Fsche_Osterformel
         internal DateTime EasterSunday(int year)
         {
             var k = year / 100;
@@ -65,12 +62,12 @@ namespace softaware.Holidays
 
             return new DateTime(year, 3 + os / 31, os % 31);
         }
-
+        
         /// <summary>
-        /// Create method
+        /// Returns <code>GeneratorFunctions</code> seeded with the calculated easter sunday for the given year.
         /// </summary>
-        /// <param name="year"></param>
-        /// <returns></returns>
+        /// <param name="year">The year for which the holidays should be generated.</param>
+        /// <returns><code>GeneratorFunctions</code> bound to the calculated easter sunday.</returns>
         public GeneratorFunctions Create(int year)
             => new GeneratorFunctions(EasterSunday(year));
     }
