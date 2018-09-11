@@ -14,31 +14,34 @@ namespace softaware.Holidays
         private readonly DateTime easterSunday;
         
         internal GeneratorFunctions(DateTime easterSunday) : base() => this.easterSunday = easterSunday;
-        
+
         /// <summary>
         /// Creates a holiday on a specific date in the same year as the easter sunday.
         /// </summary>
         /// <param name="name">The name of the holiday.</param>
         /// <param name="month">The month of the holiday's date.</param>
         /// <param name="day">The day of the holiday's date.</param>
+        /// <param name="workingDay">Indicates if the day is a working day or not.</param>
         /// <returns>The holiday.</returns>
-        public Holiday WithDate(string name, int month, int day) => new Holiday { Name = name, Date = new DateTime(easterSunday.Year, month, day) };
-        
+        public Holiday WithDate(string name, int month, int day, bool workingDay = false) => new Holiday { Name = name, Date = new DateTime(easterSunday.Year, month, day), WorkingDay = workingDay };
+
         /// <summary>
         /// Creates a holiday with n days before the easter sunday.
         /// </summary>
         /// <param name="name">The name of the holiday.</param>
         /// <param name="days">The amount of days before easter sunday.</param>
+        /// <param name="workingDay">Indicates if the day is a working day or not.</param>
         /// <returns>The holiday.</returns>
-        public Holiday BeforeEaster(string name, int days) => new Holiday { Name = name, Date = easterSunday.Subtract(new TimeSpan(days, 0, 0, 0)) };
+        public Holiday BeforeEaster(string name, int days, bool workingDay = false) => new Holiday { Name = name, Date = easterSunday.Subtract(new TimeSpan(days, 0, 0, 0)), WorkingDay = workingDay };
 
         /// <summary>
         /// Creates a holiday with n days after the easter sunday.
         /// </summary>
         /// <param name="name">The name of the holiday.</param>
         /// <param name="days">The amount of days after easter sunday.</param>
+        /// <param name="workingDay">Indicates if the day is a working day or not.</param>
         /// <returns>The holiday.</returns>
-        public Holiday AfterEaster(string name, int days) => new Holiday { Name = name, Date = easterSunday.Add(new TimeSpan(days, 0, 0, 0)) };
+        public Holiday AfterEaster(string name, int days, bool workingDay = false) => new Holiday { Name = name, Date = easterSunday.Add(new TimeSpan(days, 0, 0, 0)), WorkingDay = workingDay };
     }
     
     /// <summary>
