@@ -16,7 +16,12 @@ namespace softaware.Holidays.Model
         /// Date of the holiday.
         /// </summary>
         public DateTime Date { get; set; }
-        
+
+        /// <summary>
+        /// Indicates if the day is a working day or not.
+        /// </summary>
+        public bool WorkingDay { get; set; }
+
         /// <summary>
         /// Checks whether two holidays are the same.
         /// </summary>
