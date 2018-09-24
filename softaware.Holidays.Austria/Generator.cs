@@ -26,47 +26,18 @@ namespace softaware.Holidays.Austria
             yield return holiday.AfterEaster("Ostersonntag", days: 0);
             yield return holiday.AfterEaster("Ostermontag", days: 1);
             yield return holiday.WithDate("Staatsfeiertag", month: 5, day: 1);
-            yield return CalculateMothersDay(year);
+            yield return holiday.NthDayInMonth("Muttertag", 2, DayOfWeek.Sunday, 5);
             yield return holiday.AfterEaster("Christi Himmelfahrt", days: 39);
             yield return holiday.AfterEaster("Pfingstmontag", days: 50);
             yield return holiday.AfterEaster("Fronleichnam", days: 60);
-            yield return CalculateFathersDay(year);
+            yield return holiday.NthDayInMonth("Vatertag", 2, DayOfWeek.Sunday, 6);
             yield return holiday.WithDate("Mariä Himmelfahrt", month: 8, day: 15);
             yield return holiday.WithDate("Nationalfeiertag", month: 10, day: 26);
+            yield return holiday.WithDate("Halloween", month: 10, day: 31, workingDay: true);
             yield return holiday.WithDate("Allerheiligen", month: 11, day: 1);
             yield return holiday.WithDate("Mariä Empfängnis", month: 12, day: 8);
             yield return holiday.WithDate("Christtag", month: 12, day: 25);
             yield return holiday.WithDate("Stefanitag", month: 12, day: 26);
-        }
-
-        private static Holiday CalculateFathersDay(int year)
-        {
-            var fathersDay = CalculateDateMothersFathersDay(year, false);
-            return new Holiday { Name = "Vatertag", Date = fathersDay, WorkingDay = true };
-        }
-
-        private static Holiday CalculateMothersDay(int year)
-        {
-            var mothersDay = CalculateDateMothersFathersDay(year);
-            return new Holiday { Name = "Muttertag", Date = mothersDay, WorkingDay = true };
-        }
-
-        private static DateTime CalculateDateMothersFathersDay(int year, bool calculateMothersDay = true)
-        {
-            var date = new DateTime(year, calculateMothersDay ? 5 : 6, 1);
-            var sundayCounter = date.DayOfWeek == DayOfWeek.Sunday ? 1 : 0;
-
-            while (sundayCounter < 2)
-            {
-                date = date.AddDays(1);
-
-                if (date.DayOfWeek == DayOfWeek.Sunday)
-                {
-                    sundayCounter++;
-                }
-            }
-
-            return date;
         }
     }
 }

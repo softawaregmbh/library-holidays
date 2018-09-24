@@ -27,6 +27,7 @@ namespace softaware.Holidays.Austria.Tests
                 new Model.Holiday { Name = "Vatertag", Date = new DateTime(2018, 6, 10) },
                 new Model.Holiday { Name = "Mariä Himmelfahrt", Date = new DateTime(2018, 8, 15) },
                 new Model.Holiday { Name = "Nationalfeiertag", Date = new DateTime(2018, 10, 26) },
+                new Model.Holiday { Name = "Halloween", Date = new DateTime(2018, 10, 31) },
                 new Model.Holiday { Name = "Allerheiligen", Date = new DateTime(2018, 11, 1) },
                 new Model.Holiday { Name = "Mariä Empfängnis", Date = new DateTime(2018, 12, 8) },
                 new Model.Holiday { Name = "Christtag", Date = new DateTime(2018, 12, 25) },
