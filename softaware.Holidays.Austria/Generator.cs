@@ -28,6 +28,7 @@ namespace softaware.Holidays.Austria
             yield return holiday.WithDate("Staatsfeiertag", month: 5, day: 1);
             yield return holiday.NthDayInMonth("Muttertag", 2, DayOfWeek.Sunday, 5);
             yield return holiday.AfterEaster("Christi Himmelfahrt", days: 39);
+            yield return holiday.AfterEaster("Pfingstsonntag", days: 49);
             yield return holiday.AfterEaster("Pfingstmontag", days: 50);
             yield return holiday.AfterEaster("Fronleichnam", days: 60);
             yield return holiday.NthDayInMonth("Vatertag", 2, DayOfWeek.Sunday, 6);
@@ -36,6 +37,7 @@ namespace softaware.Holidays.Austria
             yield return holiday.WithDate("Halloween", month: 10, day: 31, workingDay: true);
             yield return holiday.WithDate("Allerheiligen", month: 11, day: 1);
             yield return holiday.WithDate("Mariä Empfängnis", month: 12, day: 8);
+            yield return holiday.WithDate("Heiligabend", month: 12, day: 24, workingDay: true);
             yield return holiday.WithDate("Christtag", month: 12, day: 25);
             yield return holiday.WithDate("Stefanitag", month: 12, day: 26);
         }
