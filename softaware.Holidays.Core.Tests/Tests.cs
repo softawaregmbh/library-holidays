@@ -1,4 +1,6 @@
 using System;
+using FsCheck;
+using FsCheck.Xunit;
 using Xunit;
 
 namespace softaware.Holidays.Core.Tests
@@ -19,6 +21,14 @@ namespace softaware.Holidays.Core.Tests
             Assert.Equal(
                 new Generator().EasterSunday(2019),
                 new DateTime(2019, 4, 21));
+        }
+
+        [Property]
+        public void ShouldBeSunday(PositiveInt year)
+        {
+            Assert.Equal(
+                DayOfWeek.Sunday,
+                new Generator().EasterSunday(year.Get).DayOfWeek);
         }
     }
 }
