@@ -1,6 +1,4 @@
 using System;
-using FsCheck;
-using FsCheck.Xunit;
 using Xunit;
 
 namespace softaware.Holidays.Core.Tests
