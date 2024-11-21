@@ -22,6 +22,7 @@ namespace softaware.Holidays.Austria.Tests
                 new Model.Holiday { Name = "Staatsfeiertag", Date = new DateTime(2018, 5, 1) },
                 new Model.Holiday { Name = "Muttertag", Date = new DateTime(2018, 5, 13) },
                 new Model.Holiday { Name = "Christi Himmelfahrt", Date = new DateTime(2018, 5, 10) },
+                new Model.Holiday { Name = "Pfingstsonntag", Date = new DateTime(2018, 5, 20) },
                 new Model.Holiday { Name = "Pfingstmontag", Date = new DateTime(2018, 5, 21) },
                 new Model.Holiday { Name = "Fronleichnam", Date = new DateTime(2018, 5, 31) },
                 new Model.Holiday { Name = "Vatertag", Date = new DateTime(2018, 6, 10) },
@@ -30,8 +31,39 @@ namespace softaware.Holidays.Austria.Tests
                 new Model.Holiday { Name = "Halloween", Date = new DateTime(2018, 10, 31) },
                 new Model.Holiday { Name = "Allerheiligen", Date = new DateTime(2018, 11, 1) },
                 new Model.Holiday { Name = "Mariä Empfängnis", Date = new DateTime(2018, 12, 8) },
+                new Model.Holiday { Name = "Heiligabend", Date = new DateTime(2018, 12, 24) },
                 new Model.Holiday { Name = "Christtag", Date = new DateTime(2018, 12, 25) },
                 new Model.Holiday { Name = "Stefanitag", Date = new DateTime(2018, 12, 26) },
+            });
+        }
+
+        [Fact]
+        public void Holidays2013()
+        {
+            var holidays = new Holidays.Generator().ForAustria(2013);
+
+            Assert.Equal(holidays, new List<Model.Holiday>() {
+                new Model.Holiday { Name = "Neujahr", Date = new DateTime(2013, 1, 1) },
+                new Model.Holiday { Name = "Heilige Drei Könige", Date = new DateTime(2013, 1, 6) },
+                new Model.Holiday { Name = "Valentinstag", Date = new DateTime(2013, 2, 14) },
+                new Model.Holiday { Name = "Karfreitag", Date = new DateTime(2013, 3, 29) },
+                new Model.Holiday { Name = "Ostersonntag", Date = new DateTime(2013, 3, 31) },
+                new Model.Holiday { Name = "Ostermontag", Date = new DateTime(2013, 4, 1) },
+                new Model.Holiday { Name = "Staatsfeiertag", Date = new DateTime(2013, 5, 1) },
+                new Model.Holiday { Name = "Muttertag", Date = new DateTime(2013, 5, 12) },
+                new Model.Holiday { Name = "Christi Himmelfahrt", Date = new DateTime(2013, 5, 9) },
+                new Model.Holiday { Name = "Pfingstsonntag", Date = new DateTime(2013, 5, 19) },
+                new Model.Holiday { Name = "Pfingstmontag", Date = new DateTime(2013, 5, 20) },
+                new Model.Holiday { Name = "Fronleichnam", Date = new DateTime(2013, 5, 30) },
+                new Model.Holiday { Name = "Vatertag", Date = new DateTime(2013, 6, 9) },
+                new Model.Holiday { Name = "Mariä Himmelfahrt", Date = new DateTime(2013, 8, 15) },
+                new Model.Holiday { Name = "Nationalfeiertag", Date = new DateTime(2013, 10, 26) },
+                new Model.Holiday { Name = "Halloween", Date = new DateTime(2013, 10, 31) },
+                new Model.Holiday { Name = "Allerheiligen", Date = new DateTime(2013, 11, 1) },
+                new Model.Holiday { Name = "Mariä Empfängnis", Date = new DateTime(2013, 12, 8) },
+                new Model.Holiday { Name = "Heiligabend", Date = new DateTime(2013, 12, 24) },
+                new Model.Holiday { Name = "Christtag", Date = new DateTime(2013, 12, 25) },
+                new Model.Holiday { Name = "Stefanitag", Date = new DateTime(2013, 12, 26) },
             });
         }
 

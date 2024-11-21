@@ -85,7 +85,7 @@ namespace softaware.Holidays
             var oe = 7 - (og - sz) % 7;
             var os = og + oe;
 
-            return new DateTime(year, 3 + os / 31, os % 31);
+            return new DateTime(year, 3, 1).AddDays(os - 1);
         }
         
         /// <summary>
