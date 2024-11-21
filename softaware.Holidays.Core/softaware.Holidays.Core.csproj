@@ -9,11 +9,11 @@
     <PackageTags>softaware, Holiday</PackageTags>
     <Company>softaware gmbh</Company>
     <Authors>softaware gmbh</Authors>
-    <PackageLicenseUrl>https://github.com/softawaregmbh/library-holidays/blob/master/LICENSE</PackageLicenseUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageIconUrl>https://secure.gravatar.com/avatar/d441f5a5514d2afce7da518a89f028d0?s=512&amp;r=g&amp;d=retro</PackageIconUrl>
-    <Description>A simple .netstandard library for automatically generating holidays.
-This is the core library.</Description>
+    <PackageIcon>package-icon.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>A simple .netstandard library for automatically generating holidays. This is the core library.</Description>
+    <PackageReleaseNotes>Update to netstandard2.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,5 +24,9 @@ This is the core library.</Description>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard1.0\softaware.Holidays.Core.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\Assets\package-icon.png" Link="package-icon.png" Pack="true" PackagePath="/" />
+  </ItemGroup>
 
 </Project>
